@@ -39,3 +39,4 @@ export '/home20_search_articles/home20_search_articles_widget.dart'
 export '/list13_property_listview/list13_property_listview_widget.dart'
     show List13PropertyListviewWidget;
 export '/test_home/test_home_widget.dart' show TestHomeWidget;
+export '/hosting_gala/hosting_gala_widget.dart' show HostingGalaWidget;

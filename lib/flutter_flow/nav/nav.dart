@@ -287,6 +287,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           name: 'TestHome',
           path: '/testHome',
           builder: (context, params) => TestHomeWidget(),
+        ),
+        FFRoute(
+          name: 'HostingGala',
+          path: '/hostingGala',
+          builder: (context, params) => HostingGalaWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
