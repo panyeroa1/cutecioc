@@ -9,6 +9,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'create_account_model.dart';
@@ -215,7 +216,27 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
           ),
         ],
       ),
-      'buttonOnPageLoadAnimation': AnimationInfo(
+      'buttonOnPageLoadAnimation1': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          VisibilityEffect(duration: 750.ms),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 750.0.ms,
+            duration: 400.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+          MoveEffect(
+            curve: Curves.easeInOut,
+            delay: 750.0.ms,
+            duration: 400.0.ms,
+            begin: Offset(0.0, 40.0),
+            end: Offset(0.0, 0.0),
+          ),
+        ],
+      ),
+      'buttonOnPageLoadAnimation2': AnimationInfo(
         trigger: AnimationTrigger.onPageLoad,
         effectsBuilder: () => [
           VisibilityEffect(duration: 750.ms),
@@ -277,7 +298,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
-                      'assets/images/Group_6_(2).png',
+                      'assets/images/Group_6__2_-removebg-preview_nobg.png',
                       width: 140.0,
                       height: 140.0,
                       fit: BoxFit.cover,
@@ -289,7 +310,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
             ),
             Container(
               width: double.infinity,
-              height: 500.0,
+              height: 700.0,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -312,7 +333,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 44.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
@@ -327,6 +348,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                   .override(
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .headlineLargeFamily,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
                                     letterSpacing: 0.0,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -356,6 +379,8 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .labelMediumFamily,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
                                         letterSpacing: 0.0,
                                         useGoogleFonts: GoogleFonts.asMap()
                                             .containsKey(
@@ -393,7 +418,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                               FlutterFlowTheme.of(context)
                                                   .titleSmallFamily,
                                           color: FlutterFlowTheme.of(context)
-                                              .primary,
+                                              .primaryBackground,
                                           fontSize: 14.0,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: GoogleFonts.asMap()
@@ -502,7 +527,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
-                            24.0, 16.0, 24.0, 0.0),
+                            24.0, 16.0, 24.0, 24.0),
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
@@ -605,7 +630,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                             24.0, 16.0, 24.0, 12.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.end,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             FFButtonWidget(
                               onPressed: () async {
@@ -658,9 +683,38 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                       ),
                       Align(
                         alignment: AlignmentDirectional(0.0, -1.0),
+                        child: Container(
+                          decoration: BoxDecoration(),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 12.0, 0.0, 12.0),
+                                child: Text(
+                                  'or',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .bodyMediumFamily,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMediumFamily),
+                                      ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(0.0, -1.0),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              2.0, 24.0, 0.0, 12.0),
+                              20.0, 12.0, 20.0, 12.0),
                           child: FFButtonWidget(
                             onPressed: () async {
                               GoRouter.of(context).prepareAuthEvent();
@@ -672,21 +726,26 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
 
                               context.goNamedAuth('main_Feed', context.mounted);
                             },
-                            text: 'Continue as guest',
+                            text: 'Google',
+                            icon: FaIcon(
+                              FontAwesomeIcons.google,
+                              size: 15.0,
+                            ),
                             options: FFButtonOptions(
-                              width: 200.0,
-                              height: 40.0,
+                              width: double.infinity,
+                              height: 55.0,
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
                               iconPadding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
+                              color: FlutterFlowTheme.of(context).primary,
                               textStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .labelMediumFamily,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
                                     letterSpacing: 0.0,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
@@ -698,10 +757,63 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                                 color: FlutterFlowTheme.of(context).alternate,
                                 width: 2.0,
                               ),
-                              borderRadius: BorderRadius.circular(8.0),
+                              borderRadius: BorderRadius.circular(12.0),
                             ),
                           ).animateOnPageLoad(
-                              animationsMap['buttonOnPageLoadAnimation']!),
+                              animationsMap['buttonOnPageLoadAnimation1']!),
+                        ),
+                      ),
+                      Align(
+                        alignment: AlignmentDirectional(0.0, -1.0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              20.0, 12.0, 20.0, 12.0),
+                          child: FFButtonWidget(
+                            onPressed: () async {
+                              GoRouter.of(context).prepareAuthEvent();
+                              final user =
+                                  await authManager.signInAnonymously(context);
+                              if (user == null) {
+                                return;
+                              }
+
+                              context.goNamedAuth('main_Feed', context.mounted);
+                            },
+                            text: 'Apple',
+                            icon: FaIcon(
+                              FontAwesomeIcons.appleAlt,
+                              size: 15.0,
+                            ),
+                            options: FFButtonOptions(
+                              width: double.infinity,
+                              height: 55.0,
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FlutterFlowTheme.of(context).primary,
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .labelMedium
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .labelMediumFamily,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .labelMediumFamily),
+                                  ),
+                              elevation: 0.0,
+                              borderSide: BorderSide(
+                                color: FlutterFlowTheme.of(context).alternate,
+                                width: 2.0,
+                              ),
+                              borderRadius: BorderRadius.circular(12.0),
+                            ),
+                          ).animateOnPageLoad(
+                              animationsMap['buttonOnPageLoadAnimation2']!),
                         ),
                       ),
                     ],

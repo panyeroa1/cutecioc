@@ -14,6 +14,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
+import 'backend/stripe/payment_manager.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   GoRouter.optionURLReflectsImperativeAPIs = true;
@@ -22,6 +24,8 @@ void main() async {
   await initFirebase();
 
   await FlutterFlowTheme.initialize();
+
+  await initializeStripe();
 
   runApp(MyApp());
 }

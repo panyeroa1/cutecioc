@@ -297,6 +297,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           name: 'Details14Destination',
           path: '/details14Destination',
           builder: (context, params) => Details14DestinationWidget(),
+        ),
+        FFRoute(
+          name: 'Loginpage',
+          path: '/loginpage',
+          builder: (context, params) => LoginpageWidget(),
+        ),
+        FFRoute(
+          name: 'Authpage1',
+          path: '/authpage1',
+          builder: (context, params) => Authpage1Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

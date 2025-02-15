@@ -253,7 +253,7 @@ class _LoginWidgetState extends State<LoginWidget>
           image: DecorationImage(
             fit: BoxFit.cover,
             image: CachedNetworkImageProvider(
-              'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxNHx8aG90ZWx8ZW58MHx8fHwxNzM5NjAyMzQyfDA&ixlib=rb-4.0.3&q=80&w=1080',
+              'https://images.unsplash.com/photo-1472552944129-b035e9ea3744?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxuaWdodCUyMHNreXxlbnwwfHx8fDE3Mzk1ODc5NDB8MA&ixlib=rb-4.0.3&q=80&w=1080',
             ),
           ),
         ),
@@ -270,7 +270,7 @@ class _LoginWidgetState extends State<LoginWidget>
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
-                      'assets/images/455dd086-b0c9-4364-8f7e-26838a3f1117_removalai_preview.png',
+                      'assets/images/Group_6__2_-removebg-preview_nobg.png',
                       width: 140.0,
                       height: 140.0,
                       fit: BoxFit.cover,
@@ -307,7 +307,7 @@ class _LoginWidgetState extends State<LoginWidget>
                         EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 44.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
@@ -320,6 +320,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .headlineLargeFamily,
+                                  color: FlutterFlowTheme.of(context)
+                                      .primaryBackground,
                                   letterSpacing: 0.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
@@ -341,6 +343,8 @@ class _LoginWidgetState extends State<LoginWidget>
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .labelMediumFamily,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBackground,
                                       letterSpacing: 0.0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(

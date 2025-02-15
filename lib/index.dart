@@ -42,3 +42,5 @@ export '/test_home/test_home_widget.dart' show TestHomeWidget;
 export '/hosting_gala/hosting_gala_widget.dart' show HostingGalaWidget;
 export '/details14_destination/details14_destination_widget.dart'
     show Details14DestinationWidget;
+export '/loginpage/loginpage_widget.dart' show LoginpageWidget;
+export '/authpage1/authpage1_widget.dart' show Authpage1Widget;
