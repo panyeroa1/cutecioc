@@ -292,6 +292,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
           name: 'HostingGala',
           path: '/hostingGala',
           builder: (context, params) => HostingGalaWidget(),
+        ),
+        FFRoute(
+          name: 'Details14Destination',
+          path: '/details14Destination',
+          builder: (context, params) => Details14DestinationWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

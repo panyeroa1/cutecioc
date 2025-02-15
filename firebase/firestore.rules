@@ -64,21 +64,45 @@ service cloud.firestore {
       allow delete: if resource.data.user == /databases/$(database)/documents/users/$(request.auth.uid);
     }
 
-    match /property/{document} {
+    match /Property/{document} {
       allow create: if true;
       allow read: if true;
       allow write: if false;
       allow delete: if false;
     }
 
-    match /property/{parent}/amenities/{document} {
+    match /Property/{parent}/availability/{document} {
       allow create: if true;
       allow read: if true;
       allow write: if false;
       allow delete: if false;
     }
 
-    match /{path=**}/amenities/{document} {
+    match /{path=**}/availability/{document} {
+      allow read: if true;
+    }
+
+
+    match /Property/{parent}/images/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/images/{document} {
+      allow read: if true;
+    }
+
+
+    match /Property/{parent}/reviews/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/reviews/{document} {
       allow read: if true;
     }
 

@@ -40,3 +40,5 @@ export '/list13_property_listview/list13_property_listview_widget.dart'
     show List13PropertyListviewWidget;
 export '/test_home/test_home_widget.dart' show TestHomeWidget;
 export '/hosting_gala/hosting_gala_widget.dart' show HostingGalaWidget;
+export '/details14_destination/details14_destination_widget.dart'
+    show Details14DestinationWidget;
