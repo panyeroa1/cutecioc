@@ -254,7 +254,7 @@ class _CreateStoryWidgetState extends State<CreateStoryWidget> {
                                             _model.storyDescriptionFocusNode,
                                         obscureText: false,
                                         decoration: InputDecoration(
-                                          hintText: 'Comment....',
+                                          hintText: 'Message the owner...',
                                           hintStyle: FlutterFlowTheme.of(
                                                   context)
                                               .labelMedium
@@ -618,9 +618,9 @@ class _CreateStoryWidgetState extends State<CreateStoryWidget> {
 
                             context.pushNamed('main_Feed');
                           },
-                          text: 'Create Story',
+                          text: 'Add Property Video',
                           options: FFButtonOptions(
-                            width: 140.0,
+                            width: 180.0,
                             height: 50.0,
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),

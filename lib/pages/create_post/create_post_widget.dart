@@ -61,7 +61,7 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
               backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
               automaticallyImplyLeading: false,
               title: Text(
-                'Create Post',
+                'Host with Gala',
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
                       fontFamily:
                           FlutterFlowTheme.of(context).headlineMediumFamily,
@@ -540,7 +540,7 @@ class _CreatePostWidgetState extends State<CreatePostWidget> {
                         },
                       );
                     },
-                    text: 'Create Post',
+                    text: 'Post Property',
                     options: FFButtonOptions(
                       width: 270.0,
                       height: 50.0,
