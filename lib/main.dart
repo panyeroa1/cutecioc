@@ -160,6 +160,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'main_Feed': MainFeedWidget(),
       'main_Chat': MainChatWidget(),
       'main_Profile': MainProfileWidget(),
+      'Home20SearchArticles': Home20SearchArticlesWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -210,6 +211,14 @@ class _NavBarPageState extends State<NavBarPage> {
                 size: 24.0,
               ),
               label: '__',
+              tooltip: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home_outlined,
+                size: 24.0,
+              ),
+              label: '',
               tooltip: '',
             )
           ],

@@ -633,6 +633,7 @@ class _CreateStoryWidgetState extends State<CreateStoryWidget> {
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .titleSmallFamily,
                                   color: Colors.white,
+                                  fontSize: 14.0,
                                   letterSpacing: 0.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)

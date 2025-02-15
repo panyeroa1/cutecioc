@@ -34,3 +34,8 @@ export '/updated_chat/chat_2_invite_users/chat2_invite_users_widget.dart'
     show Chat2InviteUsersWidget;
 export '/updated_chat/image_details/image_details_widget.dart'
     show ImageDetailsWidget;
+export '/home20_search_articles/home20_search_articles_widget.dart'
+    show Home20SearchArticlesWidget;
+export '/list13_property_listview/list13_property_listview_widget.dart'
+    show List13PropertyListviewWidget;
+export '/test_home/test_home_widget.dart' show TestHomeWidget;

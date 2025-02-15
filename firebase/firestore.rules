@@ -63,5 +63,24 @@ service cloud.firestore {
       allow write: if resource.data.user == /databases/$(database)/documents/users/$(request.auth.uid);
       allow delete: if resource.data.user == /databases/$(database)/documents/users/$(request.auth.uid);
     }
+
+    match /property/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /property/{parent}/amenities/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/amenities/{document} {
+      allow read: if true;
+    }
+
   }
 }

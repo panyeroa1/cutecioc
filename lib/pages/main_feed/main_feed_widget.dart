@@ -119,14 +119,6 @@ class _MainFeedWidgetState extends State<MainFeedWidget>
               title: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
-                    child: Icon(
-                      Icons.alternate_email_rounded,
-                      color: FlutterFlowTheme.of(context).primary,
-                      size: 44.0,
-                    ),
-                  ),
                   Text(
                     'treads.io',
                     style: FlutterFlowTheme.of(context).headlineLarge.override(

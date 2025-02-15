@@ -260,7 +260,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
           image: DecorationImage(
             fit: BoxFit.cover,
             image: CachedNetworkImageProvider(
-              'https://images.unsplash.com/photo-1664575196644-808978af9b1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxyZW1vdGUlMjB3b3JrfGVufDB8fHx8MTY5MjA1NjA1Nnww&ixlib=rb-4.0.3&q=80&w=1080',
+              'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxIb3RlbHxlbnwwfHx8fDE3Mzk2MDI1NDF8MA&ixlib=rb-4.0.3&q=80&w=1080',
             ),
           ),
         ),
@@ -277,7 +277,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget>
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
-                      'assets/images/treads_logo@3x.png',
+                      'assets/images/Group_6_(2).png',
                       width: 140.0,
                       height: 140.0,
                       fit: BoxFit.cover,

@@ -253,7 +253,7 @@ class _LoginWidgetState extends State<LoginWidget>
           image: DecorationImage(
             fit: BoxFit.cover,
             image: CachedNetworkImageProvider(
-              'https://images.unsplash.com/photo-1664575600796-ffa828c5cb6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxMnx8YnVzaW5lc3N8ZW58MHx8fHwxNjkyMDUyMDE3fDA&ixlib=rb-4.0.3&q=80&w=1080',
+              'https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxNHx8aG90ZWx8ZW58MHx8fHwxNzM5NjAyMzQyfDA&ixlib=rb-4.0.3&q=80&w=1080',
             ),
           ),
         ),
@@ -270,7 +270,7 @@ class _LoginWidgetState extends State<LoginWidget>
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
-                      'assets/images/treads_logo@3x.png',
+                      'assets/images/455dd086-b0c9-4364-8f7e-26838a3f1117_removalai_preview.png',
                       width: 140.0,
                       height: 140.0,
                       fit: BoxFit.cover,

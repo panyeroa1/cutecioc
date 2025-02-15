@@ -270,6 +270,23 @@ GoRouter createRouter(AppStateNotifier appStateNotifier, [Widget? entryPage]) =>
               ParamType.Document,
             ),
           ),
+        ),
+        FFRoute(
+          name: 'Home20SearchArticles',
+          path: '/home20SearchArticles',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'Home20SearchArticles')
+              : Home20SearchArticlesWidget(),
+        ),
+        FFRoute(
+          name: 'List13PropertyListview',
+          path: '/list13PropertyListview',
+          builder: (context, params) => List13PropertyListviewWidget(),
+        ),
+        FFRoute(
+          name: 'TestHome',
+          path: '/testHome',
+          builder: (context, params) => TestHomeWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
